@@ -148,7 +148,10 @@ class SesameWebSocket:
                 self._handle_call_disconnect_response(data)
             else:
                 logger.debug(f"Received message type: {message_type}")
-                
+
+            # Mark that we've received data since the last sent message
+            self.received_since_last_sent = True
+
         except json.JSONDecodeError:
             logger.warning(f"Received non-JSON message: {message}")
         except Exception as e:
