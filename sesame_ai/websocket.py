@@ -7,7 +7,6 @@ import ssl
 import urllib.parse
 import threading
 import queue
-import time
 import logging
 import websocket as websocket_module
 
@@ -130,6 +129,9 @@ class SesameWebSocket:
     def _on_message(self, ws, message):
         """Callback when a message is received from the WebSocket"""
         try:
+            # Record that we've received a message
+            self.received_since_last_sent = True
+
             # Parse the message as JSON
             data = json.loads(message)
             
@@ -148,7 +150,7 @@ class SesameWebSocket:
                 self._handle_call_disconnect_response(data)
             else:
                 logger.debug(f"Received message type: {message_type}")
-                
+
         except json.JSONDecodeError:
             logger.warning(f"Received non-JSON message: {message}")
         except Exception as e:
