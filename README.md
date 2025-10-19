@@ -170,6 +170,16 @@ python examples/voice_chat.py
 
 # Chat with Maya
 python examples/voice_chat.py --character Maya
+
+# Generate a Bee-8B advertising slogan from the model's logo
+python examples/bee8b_slogan.py
+```
+
+The Bee-8B example requires optional dependencies that are not installed with
+the base package:
+
+```bash
+pip install "transformers>=4.40" torch pillow requests
 ```
 
 Command-line options:
