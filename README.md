@@ -24,6 +24,13 @@ cd sesame_ai
 pip install -e .
 ```
 
+If you want to call hosted Hugging Face Spaces with `gradio_client`, install
+the optional dependency as well:
+
+```bash
+pip install gradio_client
+```
+
 ## Features
 
 - Authentication and account management
@@ -173,6 +180,9 @@ python examples/voice_chat.py --character Maya
 
 # Generate a Bee-8B advertising slogan from the model's logo
 python examples/bee8b_slogan.py
+
+# Call a Hugging Face Space using gradio_client
+python examples/gradio_client_usage.py
 ```
 
 The Bee-8B example requires optional dependencies that are not installed with

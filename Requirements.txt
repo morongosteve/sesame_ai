@@ -8,3 +8,6 @@ PyAudio>=0.2.11
 pytest>=6.0.0
 black>=21.5b2
 flake8>=3.9.0
+
+# Optional integration dependencies
+gradio_client>=0.16.4
