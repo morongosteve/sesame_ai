@@ -1,0 +1,23 @@
+Run preflight_check.py.
+
+If any checks fail:
+- Fix automatically
+- Retry until pass
+
+Then:
+1. Run gpu_safe_install.sh
+2. Create virtual environment
+3. Clone ComfyUI repo
+4. Install dependencies
+5. Install WanVideo nodes
+6. Verify port 8188 availability
+7. Launch server with --listen 0.0.0.0
+
+If any step fails:
+- Log full error
+- Retry with fallback strategy
+- Continue execution
+
+Return:
+- Working URL
+- Status report
