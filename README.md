@@ -235,7 +235,8 @@ WebSocket client for real-time voice conversation.
 The library provides several exception classes for error handling:
 
 - `SesameAIError` - Base exception class
-- `InvalidTokenError` - Invalid token errors
+- `AuthenticationError` - Base class for authentication failures
+- `InvalidTokenError` - Invalid token errors (subclass of `AuthenticationError`)
 - `APIError` - API errors with code and message
 - `NetworkError` - Network communication errors
 
