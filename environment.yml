@@ -1,0 +1,11 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - requests>=2.25.0
+    - websocket-client>=1.2.0
+    - numpy>=1.19.0
