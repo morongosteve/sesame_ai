@@ -230,6 +230,10 @@ WebSocket client for real-time voice conversation.
 - `disconnect()` - Disconnect from the server
 - `is_connected()` - Check if connected
 
+#### Connection Keepalive
+
+Keepalive is handled automatically — you do not need to send pings yourself. While a call is active, the client emits a lightweight `ping` ahead of outgoing data whenever there has been server activity since the last message it sent, or when the type of outgoing message changes. This keeps the call session alive during audio streaming without any extra work on your part.
+
 ## Error Handling
 
 The library provides several exception classes for error handling:

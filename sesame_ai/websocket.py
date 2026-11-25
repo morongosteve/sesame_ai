@@ -7,7 +7,6 @@ import ssl
 import urllib.parse
 import threading
 import queue
-import time
 import logging
 import websocket as websocket_module
 
